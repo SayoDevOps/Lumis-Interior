@@ -1,0 +1,207 @@
+/* ── RESPONSIVE ── */
+
+/* ─ Tablet ─ */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 48px;
+    }
+    .process-steps::before {
+        display: none;
+    }
+    #about {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .about-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .about-badge {
+        bottom: 10px;
+        left: 10px;
+    }
+}
+
+/* ─ Mobile ─ */
+@media (max-width: 768px) {
+
+    /* Nav */
+    .nav-links,
+    .nav-right {
+        display: none !important;
+    }
+    .hamburger {
+        display: flex !important;
+    }
+
+    /* Hero */
+    #hero {
+        height: auto;
+        min-height: 100svh;
+    }
+    .hero-content {
+        padding: 20px 5% 60px;
+        justify-content: center;
+    }
+    h1 {
+        font-size: clamp(2.2rem, 9vw, 3.5rem);
+        letter-spacing: -0.5px;
+    }
+    .hero-desc {
+        font-size: 0.95rem;
+    }
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .hero-actions .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+
+    /* About */
+    #about {
+        grid-template-columns: 1fr;
+        padding: 80px 5%;
+        gap: 40px;
+    }
+    .about-img,
+    .about-canvas {
+        width: 100%;
+        height: 300px !important;
+        min-height: 300px !important;
+        object-fit: cover;
+        border-radius: 2px;
+    }
+    .about-badge {
+        display: none;
+    }
+    .about-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+    .stat-num {
+        font-size: 2rem;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .services-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    /* Process */
+    .process-steps {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Work */
+    .work-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .work-item:nth-child(1) {
+        grid-row: span 1;
+    }
+    .work-item:nth-child(1) .work-img,
+    .work-item:nth-child(1) .work-canvas {
+        height: 380px !important;
+        min-height: 380px !important;
+    }
+    .work-item:nth-child(2) .work-img,
+    .work-item:nth-child(2) .work-canvas,
+    .work-item:nth-child(3) .work-img,
+    .work-item:nth-child(3) .work-canvas {
+        height: 260px !important;
+        min-height: 260px !important;
+    }
+    .work-overlay {
+        opacity: 1 !important;
+    }
+    .work-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    .testimonials-header {
+        text-align: left;
+    }
+
+    /* CTA */
+    .cta-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cta-actions .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+
+    /* Footer */
+    .footer-top {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .footer-cols {
+        flex-direction: column;
+        gap: 32px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+    .footer-socials {
+        justify-content: center;
+    }
+}
+
+/* ─ Small Mobile ─ */
+@media (max-width: 480px) {
+    nav {
+        padding: 16px 5%;
+    }
+    .about-stats {
+        gap: 10px;
+    }
+    .stat-num {
+        font-size: 1.8rem;
+    }
+    .stat-label {
+        font-size: 0.7rem;
+    }
+    .service-card {
+        padding: 32px 24px;
+    }
+    .testimonial-card {
+        padding: 28px 24px;
+    }
+    .work-item:nth-child(1) .work-img,
+    .work-item:nth-child(1) .work-canvas {
+        height: 280px !important;
+        min-height: 280px !important;
+    }
+    .work-item:nth-child(2) .work-img,
+    .work-item:nth-child(2) .work-canvas,
+    .work-item:nth-child(3) .work-img,
+    .work-item:nth-child(3) .work-canvas {
+        height: 220px !important;
+        min-height: 220px !important;
+    }
+}
