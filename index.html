@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMIS | Luxury Interior Design Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400&family=DM+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+ 
+    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+ 
+    <script>
+       function toggleMobileMenu(e) {
+            if (e) e.preventDefault();
+            const mobileNav = document.getElementById('mobileNav');
+            const hamburger = document.getElementById('hamburger');
+            if (!mobileNav || !hamburger) return;
+            const isOpen = hamburger.classList.toggle('open');
+            mobileNav.classList.toggle('open', isOpen);
+            mobileNav.style.display = isOpen ? 'flex' : 'none';
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        }
+ 
+        function closeMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const hamburger = document.getElementById('hamburger');
+            if (hamburger) hamburger.classList.remove('open');
+            if (mobileNav) {
+                mobileNav.classList.remove('open');
+                mobileNav.style.display = 'none';
+            }
+            document.body.style.overflow = '';
+        }
+    </script>
+</head>
+ 
+<body>
+    <canvas id="wave-canvas" aria-hidden="true"></canvas>
+ 
+    <nav id="navbar">
+        <a href="#" class="nav-logo">LUM<span>I</span>S</a>
+        <ul class="nav-links">
+            <li><a href="#about">Studio</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#work">Work</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="#cta" class="btn btn-outline">Consultation</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobileMenu(event)">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+ 
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#about" class="mob-link" onclick="closeMobileMenu()">Studio</a>
+        <a href="#services" class="mob-link" onclick="closeMobileMenu()">Services</a>
+        <a href="#process" class="mob-link" onclick="closeMobileMenu()">Process</a>
+        <a href="#work" class="mob-link" onclick="closeMobileMenu()">Work</a>
+        <a href="#cta" class="mob-link" onclick="closeMobileMenu()">Consultation</a>
+    </div>
+ 
+    <!-- Hero -->
+    <section id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-lines"></div>
+        <div class="hero-content">
+            <div class="hero-eyebrow">Est. 2017</div>
+            <h1>Spaces forged in<br><em>quiet luxury</em></h1>
+            <p class="hero-desc">We design high-end residential and commercial environments that feel both timeless and
+                undeniably avant-garde. Based in Lagos, operating globally.</p>
+            <div class="hero-actions">
+                <a href="#work" class="btn btn-gold">View Selected Work</a>
+                <a href="#about" class="btn btn-outline">Our Philosophy</a>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Marquee -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-item">
+                Bespoke Interiors <div class="marquee-dot"></div>
+                Architectural Visualization <div class="marquee-dot"></div>
+                Custom Furniture <div class="marquee-dot"></div>
+                Spatial Planning <div class="marquee-dot"></div>
+                Curated Materials <div class="marquee-dot"></div>
+            </div>
+            <div class="marquee-item" aria-hidden="true">
+                Bespoke Interiors <div class="marquee-dot"></div>
+                Architectural Visualization <div class="marquee-dot"></div>
+                Custom Furniture <div class="marquee-dot"></div>
+                Spatial Planning <div class="marquee-dot"></div>
+                Curated Materials <div class="marquee-dot"></div>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- About -->
+    <section id="about">
+        <div class="about-left reveal">
+            <div class="section-label">The Studio</div>
+            <h2 class="section-title">Design rooted in<br><em>narrative</em></h2>
+            <p>At LUMIS, we believe a space should tell the story of the people who inhabit it. We don't just decorate;
+                we sculpt environments that evoke emotion, using light, texture, and rare materials as our vocabulary.
+            </p>
+            <p>Whether crafting a private residence in Eko Atlantic or a flagship boutique in Mayfair, we collaborate
+                with our clients to render concepts that feel inevitable, as though they could never have been any other way.</p>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <div class="stat-num">340+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">12</div>
+                    <div class="stat-label">Design Awards</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">98%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+        <div class="about-right reveal reveal-delay-2">
+            <div class="about-img-wrap">
+                <img src="images/about.jpg" alt="LUMIS Studio" class="about-img">
+            </div>
+            <div class="about-badge">
+                <div class="about-badge-num">8 yrs</div>
+                <div class="about-badge-text">of design excellence</div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Services -->
+    <section id="services">
+        <div class="services-inner">
+            <div class="services-header reveal">
+                <div>
+                    <div class="section-label">What We Do</div>
+                    <h2 class="section-title">Our <em>services</em></h2>
+                </div>
+                <p>Every engagement is tailored. We offer a full spectrum of interior design services, from initial
+                    concept to final installation.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-num">01</div>
+                    <svg class="service-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+                        <rect x="6" y="6" width="32" height="32" rx="2" />
+                        <path d="M6 16h32M16 6v32" />
+                    </svg>
+                    <div class="service-title">Residential Design</div>
+                    <div class="service-desc">Full-home interior transformations for private residences. We craft spaces
+                        that mirror your personality and elevate your daily life.</div>
+                    <a href="#" class="service-arrow">Explore &rarr;</a>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-num">02</div>
+                    <svg class="service-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+                        <path d="M8 36V16L22 8l14 8v20H8z" />
+                        <path d="M16 36v-10h12v10" />
+                    </svg>
+                    <div class="service-title">Commercial Spaces</div>
+                    <div class="service-desc">Offices, boutiques, hospitality venues and more: environments that
+                        communicate your brand with authority and warmth.</div>
+                    <a href="#" class="service-arrow">Explore &rarr;</a>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-num">03</div>
+                    <svg class="service-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+                        <circle cx="22" cy="22" r="14" />
+                        <path d="M22 8v4M22 32v4M8 22h4M32 22h4" />
+                        <circle cx="22" cy="22" r="5" />
+                    </svg>
+                    <div class="service-title">3D Visualization</div>
+                    <div class="service-desc">Photorealistic 3D renders and virtual walkthroughs of your space before a
+                        single piece of furniture is moved.</div>
+                    <a href="#" class="service-arrow">Explore &rarr;</a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-num">04</div>
+                    <svg class="service-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+                        <path d="M10 34l8-12 6 8 5-7 7 11H10z" />
+                        <circle cx="30" cy="14" r="4" />
+                    </svg>
+                    <div class="service-title">Material Curation</div>
+                    <div class="service-desc">Access to exclusive materials, textiles, and finishes from our global
+                        supplier network, sourced for quality and provenance.</div>
+                    <a href="#" class="service-arrow">Explore &rarr;</a>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-num">05</div>
+                    <svg class="service-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+                        <path d="M8 12h28M8 22h20M8 32h24" />
+                    </svg>
+                    <div class="service-title">Space Planning</div>
+                    <div class="service-desc">Expert spatial analysis and planning to maximise flow, function, and
+                        feeling in any footprint, large or intimate.</div>
+                    <a href="#" class="service-arrow">Explore &rarr;</a>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-num">06</div>
+                    <svg class="service-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+                        <path d="M22 8l4 8 9 1-6.5 6.5 1.5 9L22 28l-8 4.5 1.5-9L9 17l9-1 4-8z" />
+                    </svg>
+                    <div class="service-title">Bespoke Furniture</div>
+                    <div class="service-desc">Custom-designed, hand-crafted furniture pieces built exclusively for your
+                        space: functional art you live with every day.</div>
+                    <a href="#" class="service-arrow">Explore &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Process -->
+    <section id="process">
+        <div class="process-header reveal">
+            <div class="section-label">How It Works</div>
+            <h2 class="section-title">The LUMIS <em>method</em></h2>
+        </div>
+        <div class="process-steps">
+            <div class="process-step reveal">
+                <div class="step-circle">01</div>
+                <div class="step-title">Discovery Call</div>
+                <div class="step-desc">We begin with a deep conversation about your vision, lifestyle, budget, and
+                    timeline. No forms. No briefs. Just a real dialogue.</div>
+            </div>
+            <div class="process-step reveal reveal-delay-1">
+                <div class="step-circle">02</div>
+                <div class="step-title">AI Moodboarding</div>
+                <div class="step-desc">Our AI system generates concept boards in real-time based on your inputs: colour
+                    palettes, spatial arrangements, material combinations.</div>
+            </div>
+            <div class="process-step reveal reveal-delay-2">
+                <div class="step-circle">03</div>
+                <div class="step-title">Design Development</div>
+                <div class="step-desc">Senior designers refine the AI concepts into detailed design packages with full
+                    technical drawings and specification sheets.</div>
+            </div>
+            <div class="process-step reveal reveal-delay-3">
+                <div class="step-circle">04</div>
+                <div class="step-title">Execution & Install</div>
+                <div class="step-desc">We manage every contractor, supplier, and delivery, so the transformation
+                    happens seamlessly, on time and on budget.</div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Work -->
+    <section id="work">
+        <div class="work-inner">
+            <div class="work-header reveal">
+                <div>
+                    <div class="section-label">Selected Work</div>
+                    <h2 class="section-title">Recent <em>projects</em></h2>
+                </div>
+                <a href="#" class="btn btn-outline">View All Projects</a>
+            </div>
+            <div class="work-grid">
+                <div class="work-item reveal">
+                    <img src="images/Penthouse.jpg" alt="Penthouse" class="work-img">
+                    <div class="work-overlay">
+                        <div class="work-tag">Residential &middot; Lagos</div>
+                        <div class="work-name">The Eko Penthouse</div>
+                    </div>
+                </div>
+                <div class="work-item reveal reveal-delay-1">
+                    <img src="images/Lounge.jpg" alt="Lounge" class="work-img">
+                    <div class="work-overlay">
+                        <div class="work-tag">Commercial &middot; Abuja</div>
+                        <div class="work-name">Meridian Lounge</div>
+                    </div>
+                </div>
+                <div class="work-item reveal reveal-delay-2">
+                    <img src="images/Residence.jpg" alt="Residence" class="work-img">
+                    <div class="work-overlay">
+                        <div class="work-tag">Residential &middot; London</div>
+                        <div class="work-name">The Marlow Residence</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <div class="testimonials-header reveal">
+            <div class="section-label">Client Stories</div>
+            <h2 class="section-title">Words from those<br>who <em>live in our work</em></h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card reveal">
+                <div class="quote-mark">"</div>
+                <div class="testimonial-text">LUMIS didn't just redesign my home; they redesigned how I feel inside it.
+                    Every room has this quiet confidence I never thought possible in a Lagos apartment.</div>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><img src="images/avatar1.jpg" alt="AO"></div>
+                    <div>
+                        <div class="author-name">Adaeze Okonkwo</div>
+                        <div class="author-role">CEO, Kinara Group — Lagos</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card reveal reveal-delay-1">
+                <div class="quote-mark">"</div>
+                <div class="testimonial-text">The AI visualization tool alone was worth everything. I could see exactly
+                    what my office would look like before committing. The final result was even better than the render.
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><img src="images/avatar2.jpg" alt="JW"></div>
+                    <div>
+                        <div class="author-name">James Whitmore</div>
+                        <div class="author-role">Founder, Vantage Capital — London</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card reveal reveal-delay-2">
+                <div class="quote-mark">"</div>
+                <div class="testimonial-text">Exceptional taste, flawless execution. LUMIS understood my brief in 20
+                    minutes and delivered something I'd spent 3 years trying to articulate to other designers.</div>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><img src="images/avatar3.jpg" alt="FA"></div>
+                    <div>
+                        <div class="author-name">Fatima Al-Rashid</div>
+                        <div class="author-role">Architect, FAR Studio — Dubai</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- CTA -->
+    <section id="cta">
+        <div class="cta-inner reveal">
+            <div class="section-label">Start Your Journey</div>
+            <h2 class="section-title">Ready to transform<br>your <em>space</em>?</h2>
+            <p>Book a complimentary 30-minute consultation with our lead designer. No commitment, no pressure, just a
+                genuine conversation about your vision.</p>
+            <div class="cta-actions">
+                <a href="#" class="btn btn-gold">Book Free Consultation</a>
+                <a href="#work" class="btn btn-outline">View Portfolio First</a>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">LUM<span>I</span>S</div>
+                    <div class="footer-tagline">Premier Interior Design Studio. Crafting spaces of enduring elegance
+                        since 2017.</div>
+                </div>
+                <div class="footer-cols">
+                    <div class="footer-col">
+                        <h4>Studio</h4>
+                        <a href="#">About Us</a>
+                        <a href="#">Our Team</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Press</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <a href="#">Residential</a>
+                        <a href="#">Commercial</a>
+                        <a href="#">3D Renders</a>
+                        <a href="#">Consulting</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <a href="#">Lagos Office</a>
+                        <a href="#">London Studio</a>
+                        <a href="#"><span class="__cf_email__" data-cfemail="046c6168686b446871696d772a6061776d636a">lumisinterior@gmail.com</span></a>
+                        <a href="#">+234 800 LUMIS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copy">&copy; 2026 LUMIS Design Studio. All rights reserved.</div>
+                <div class="footer-socials">
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Pinterest</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Behance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+ 
+
+    <script src="js/cursor.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
